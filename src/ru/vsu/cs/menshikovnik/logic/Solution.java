@@ -2,7 +2,6 @@ package ru.vsu.cs.menshikovnik.logic;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Solution {
     public static ArrayList<Integer> arithmeticProgression(ArrayList<Integer> list) {
