@@ -5,19 +5,14 @@ import java.util.Collections;
 
 public class Solution {
     public static ArrayList<Integer> arithmeticProgression(ArrayList<Integer> list) {
-        boolean found = false;
         ArrayList<Integer> copyList = new ArrayList<>(list);
         Collections.sort(copyList);
         int d = copyList.get(1) - copyList.get(0);
-        for (int i = 0; i < copyList.size(); i++) {
-            if (i == copyList.size() - 1) break;
-            if (copyList.get(i + 1) - copyList.get(i) == d) {
-                found = true;
-            } else return list;
+        for (int i = 0; i < copyList.size() - 1; i++) {
+            if (copyList.get(i + 1) - copyList.get(i) != d) {
+                return list;
+            }
         }
-        if (found) {
-            return copyList;
-        }
-        return null;
+        return copyList;
     }
 }
